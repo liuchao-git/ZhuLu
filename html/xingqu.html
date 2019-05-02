@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/xingqu.css" />
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	</head>
+
+	<body>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+  pullRefresh : {
+    container:"#refreshContainer",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+    down : {
+      height:50,//可选,默认50.触发下拉刷新拖动距离,
+      auto: true,//可选,默认false.首次加载自动下拉刷新一次
+      contentdown : "下拉可以刷新",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+      contentover : "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+      contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+      callback :pullfresh-function //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+    }
+  }
+});
+		</script>
+		<!--下拉刷新容器-->
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<div class="mui-table-view mui-table-view-chevron">
+					<div class="top">
+						<div class="sou">
+							<img src="../img/fangdajing.png" />
+							<span>机构搜索</span>
+						</div>
+					</div>
+					<div class="biao">
+						<ul>
+							<li>
+								<a href="#" class="iconfont icon-jiating"></a>
+								<p>家庭教育</p>
+							</li>
+							<li>
+								<a href="#" class="iconfont icon-xiangmufudao"></a>
+								<p>学习辅导</p>
+							</li>
+							<li>
+								<a href="#" class="iconfont icon-zhangpeng"></a>
+								<p>亲子户外</p>
+							</li>
+							<li>
+								<a href="#" class="iconfont icon-ABC"></a>
+								<p>留学外语</p>
+							</li>
+							<li>
+								<a href="#" class="iconfont icon-aihao"></a>
+								<p>兴趣爱好</p>
+							</li>
+							<li>
+								<a href="#" class="iconfont icon-yinle"></a>
+								<p>音乐培训</p>
+							</li>
+							<li>
+								<a href="#" class="iconfont icon-qiu"></a>
+								<p>体育运动</p>
+							</li>
+							<li>
+								<a href="#" class="iconfont icon-yishu"></a>
+								<p>艺考辅导</p>
+							</li>
+							<li>
+								<a href="#" class="iconfont icon-quanbu"></a>
+								<p>全部</p>
+							</li>
+							<li>
+								<a></a>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<div class="mui-scroll mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+
+							<a class="mui-control-item mui-active" href="#item1">学科辅导</a>
+							<a class="mui-control-item" href="#item2">家庭教育</a>
+							<a class="mui-control-item" href="#item3">兴趣爱好</a>
+							<a class="mui-control-item" href="#item4">留学外语</a>
+							<a class="mui-control-item" href="#item5">亲子户外</a>
+							<a class="mui-control-item" href="#item6">艺考辅导</a>
+							<a class="mui-control-item" href="#item7">学科辅导</a>
+							<a class="mui-control-item" href="#item8">家庭教育</a>
+
+						</div>
+
+						<div class="mui-slider-group">
+							<div id="item1" class="mui-slider-item mui-control-content mui-active">
+								<ul class="mui-table-view">
+									<li>
+										<div class="xianshi">
+											<div class="qianggou">
+												<p><img src="../img/di05.jpg" /></p>
+												<div class="">
+													2019年春季小四数学直播课点播
+													<div class="ping">
+														<div class="left">
+															<span>☆☆☆☆☆ 5.0</span>
+															<p><span>&yen;60.00</span><del>&yen;98.00</del></p>
+														</div>
+														<div class="right">
+															<span>200人学习</span>
+															<p>抢购</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="xianshi">
+											<div class="qianggou">
+												<p><img src="../img/di04.jpg" /></p>
+												<div class="media">
+													2019年春季小四数学直播课点播
+													<div class="ping">
+														<div class="left">
+															<span>☆☆☆☆☆ 5.0</span>
+															<p><span>&yen;60.00</span><del>&yen;98.00</del></p>
+														</div>
+														<div class="right">
+															<span>200人学习</span>
+															<p>抢购</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="xianshi">
+											<div class="qianggou">
+												<p><img src="../img/di07.jpg" /></p>
+												<div>
+													2019年春季小四数学直播课点播
+													<div class="ping">
+														<div class="left">
+															<span>☆☆☆☆☆ 5.0</span>
+															<p><span>&yen;60.00</span><del>&yen;98.00</del></p>
+														</div>
+														<div class="right">
+															<span>200人学习</span>
+															<p>抢购</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="xianshi">
+											<div class="qianggou">
+												<p><img src="../img/di06.jpg" /></p>
+												<div class="media">
+													2019年春季小四数学直播课点播
+													<div class="ping">
+														<div class="left">
+															<span>☆☆☆☆☆ 5.0</span>
+															<p><span>&yen;60.00</span><del>&yen;98.00</del></p>
+														</div>
+														<div class="right">
+															<span>200人学习</span>
+															<p>抢购</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div id="item2" class="mui-slider-item mui-control-content">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell">第2个选项卡子项</li>
+									<li class="mui-table-view-cell">第2个选项卡子项</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	
+	</body>
+	
+
+</html>

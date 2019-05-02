@@ -1,0 +1,17 @@
+{
+	"index.html": {
+		"resources": [
+			"js/jquery-1.11.1.js",
+			"html/shouye.html"
+		],
+		"refer": [
+			"html/shouye.html",
+			"html/xingqu.html"
+		]
+	},
+	"html/shouye.html": {
+		"resources": [
+			"img/放大镜.png"
+		]
+	}
+}

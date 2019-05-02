@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>首页</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	.se{
+    		display: none; 
+    	}
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.1.js" ></script>
+
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	
+    </script>
+    
+</head>
+<body>
+
+  <nav class="mui-bar mui-bar-tab">
+      <a class="mui-tab-item mui-active tu" href="html/shouye.html">
+          <span class="mui-icon wu" style="display: none;"><img src="img/ic_tab_home_normal.png" width="100%"/></span>
+          <span class="mui-icon you"><img src="img/ic_tab_home_selected.png" width="100%"/></span>
+          <span class="mui-tab-label zi">首页</span>
+      </a>
+      <a class="mui-tab-item tu" href="html/xingqu.html">
+          <span class="mui-icon wu"><img src="img/ic_tab_fun_normal.png" width="100%"/></span>
+          <span class="mui-icon you" style="display: none;"><img src="img/ic_tab_fun_selected.png" width="100%"/></span>
+          <span class="mui-tab-label zi">兴趣</span>
+      </a>
+      <a class="mui-tab-item tu" href="html/guiji.html">
+          <span class="mui-icon wu"><img src="img/ic_tab_organization_normal.png" width="100%"/></span>
+          <span class="mui-icon you" style="display: none;"><img src="img/ic_tab_organization_selected.png" width="100%"/></span>
+          <span class="mui-tab-label zi">轨迹</span>
+          
+      </a>
+      <a class="mui-tab-item tu" href="html/wode.html">
+          <span class="mui-icon wu"><img src="img/ic_tab__mine_normal.png" width="100%"/></span>
+          <span class="mui-icon you" style="display: none;"><img src="img/ic_tab_mine_selected.png" width="100%"/></span>
+          <span class="mui-tab-label zi">我的</span>
+      </a>
+  </nav>
+  <script type="text/javascript">
+	$(function(){
+//		console.log("ppp")
+  		$(".tu").click(function(){
+//			console.log("ppp")
+  			$(this).children(".zi").css({"color":"#000"});
+  			$(this).siblings(".tu").children(".zi").css({"color":"#999"})
+  			$(this).children(".wu").hide().siblings(".you").show();
+  			$(this).siblings(".tu").children(".wu").show().siblings(".you").hide();
+  		})
+	}) 
+	var subpages = ['html/shouye.html', 'html/xingqu.html', 'html/guiji.html', 'html/wode.html'];
+			var subpage_style = {
+				top: '0px',
+				bottom: '51px'
+			};
+			var aniShow = {};
+			//创建子页面，首个选项卡页面显示，其它均隐藏；
+			mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				for(var i = 0; i < subpages.length; i++) {
+					var temp = {};
+					var sub = plus.webview.create(subpages[i], subpages[i], subpage_style);
+					if(i > 0) {
+						sub.hide();
+					} else {
+						temp[subpages[i]] = "true";
+						mui.extend(aniShow, temp);
+					}
+					self.append(sub);
+				}
+				
+				
+			});
+			//当前激活选项
+			var activeTab = subpages[0];
+
+			//选项卡点击事件
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				var n=$(this).index();
+				console.log(n)
+				var targetTab = this.getAttribute('href');
+				if(targetTab == activeTab) {
+					return;
+				}
+				//显示目标选项卡
+				//若为iOS平台或非首次显示，则直接显示
+				if(mui.os.ios || aniShow[targetTab]) {
+					plus.webview.show(targetTab);
+				} else {
+					//否则，使用fade-in动画，且保存变量
+					var temp = {};
+					temp[targetTab] = "true";
+					mui.extend(aniShow, temp);
+					plus.webview.show(targetTab, "fade-in", 300);
+				}
+				//隐藏当前;
+				plus.webview.hide(activeTab);
+				//更改当前活跃的选项卡
+				activeTab = targetTab;
+			});
+			//自定义事件，模拟点击“首页选项卡”
+			document.addEventListener('gohome', function() {
+				var defaultTab = document.getElementById("defaultTab");
+				//模拟首页点击
+				mui.trigger(defaultTab, 'tap');
+				//切换选项卡高亮
+				var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
+				if(defaultTab !== current) {
+					current.classList.remove('mui-active');
+					defaultTab.classList.add('mui-active');
+				}
+			});
+  </script>
+    
+    	
+   
+  
+</body>
+</html>
