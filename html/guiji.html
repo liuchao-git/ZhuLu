@@ -18,7 +18,8 @@
 		</script>
 		
 		
-		
+		<div class="mui-content mui-scroll-wrapper">
+		<div class="mui-scroll">
 		<div class="tou">
 			<p>轨迹</p>
 			<div class="jilu">
@@ -54,9 +55,17 @@
 			<div class="wei">您还未登录,登录可查看您的个人学习数据</div>
 			<div class="liji">立即登录</div>
 		</div>
+		</div>
+		</div>
 		
-		
-
+<script>
+(function($){
+        $(".mui-scroll-wrapper").scroll({
+              bounce: true,//滚动条是否有弹力默认是true
+              indicators: false, //是否显示滚动条,默认是true
+        });
+})(mui);
+	</script>
 	</body>
 
 </html>

@@ -146,6 +146,13 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"html/wode.html": {
+				"resources": [],
+				"refer": [
+					"html/wode-denglu/dednglu.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {

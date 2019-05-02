@@ -15,5 +15,10 @@
 		"resources": [
 			"img/放大镜.png"
 		]
+	},
+	"html/wode.html": {
+		"refer": [
+			"html/wode-denglu/dednglu.html"
+		]
 	}
 }
