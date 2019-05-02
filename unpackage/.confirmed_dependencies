@@ -6,7 +6,9 @@
 		],
 		"refer": [
 			"html/shouye.html",
-			"html/xingqu.html"
+			"html/xingqu.html",
+			"html/guiji.html",
+			"html/wode.html"
 		]
 	},
 	"html/shouye.html": {

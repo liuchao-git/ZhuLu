@@ -134,7 +134,9 @@
 					"html/shouye.html"
 				],
 				"refer": [
-					"html/xingqu.html"
+					"html/xingqu.html",
+					"html/guiji.html",
+					"html/wode.html"
 				],
 				"priority": 0
 			},
