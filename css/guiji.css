@@ -1,5 +1,5 @@
 .tou{
-	height: 120px;
+	height: 100px;
 	background: #84ccc9;
 }
 .tou>p{
@@ -7,7 +7,7 @@
 	font-size: 20px;
 	color: #fff;
 	padding-top: 10px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 .jilu{
 	display: flex;

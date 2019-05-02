@@ -12,10 +12,9 @@
 	</head>
 
 	<body>
-		<script type="text/javascript" src="../js/Jump.js" ></script>
-		<script src="../js/mui.min.js"></script>
+
 		<script type="text/javascript">
-			mui.init()
+			mui.init({})
 		</script>
 		<!--下拉刷新容器-->
 		<div id="refreshContainer" class="mui-content">
@@ -78,28 +77,28 @@
 					<div class="center"><img src="../img/ic_teacher_head_bg.png" width="100%" /></div>
 					<ul class="mui-table-view mui-grid-view mui-grid-9" id="tubiao">
 						<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-							<a href="#">
+							<span href="#">
 								<span class="mui-icon iconfont icon-zhibo"></span>
 								<div class="mui-media-body">直播</div>
-							</a>
+							</span>
 						</li>
 						<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-							<a href="#">
+							<span href="#">
 								<span class="mui-icon iconfont icon-zhibo"></span>
 								<div class="mui-media-body">同步课</div>
-							</a>
+							</span>
 						</li>
 						<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-							<a href="#">
+							<span href="#">
 								<span class="mui-icon iconfont icon-zhibo"></span>
 								<div class="mui-media-body">名校课</div>
-							</a>
+							</span>
 						</li>
 						<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-							<a href="#">
+							<span href="#">
 								<span class="mui-icon iconfont icon-zhibo"></span>
 								<div class="mui-media-body">课间</div>
-							</a>
+							</span>
 						</li>
 					</ul>
 
@@ -200,13 +199,17 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<script type="text/javascript">
+		</div><script type="text/javascript" src="../js/Jump.js" ></script>
+		<script>
 			var gallery = mui('.mui-slider');
 			gallery.slider({
 				interval: 2000 //自动轮播周期，若为0则不自动播放，默认为0；
 			});
 		</script>
+		
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+				
+
 	</body>
 
 </html>

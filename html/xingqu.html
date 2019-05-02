@@ -13,24 +13,15 @@
 
 	<body>
 		<script type="text/javascript" src="../js/Jump.js" ></script>
-		<script src="../js/mui.min.js"></script>
+		
+		
 		<script type="text/javascript">
 			mui.init({
-  pullRefresh : {
-    container:"#refreshContainer",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
-    down : {
-      height:50,//可选,默认50.触发下拉刷新拖动距离,
-      auto: true,//可选,默认false.首次加载自动下拉刷新一次
-      contentdown : "下拉可以刷新",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
-      contentover : "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
-      contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
-      callback :pullfresh-function //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
-    }
-  }
-});
+  
+             });
 		</script>
 		<!--下拉刷新容器-->
-		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+		<div id="refreshContainer" class="mui-content">
 			<div class="mui-scroll">
 				<!--数据列表-->
 				<div class="mui-table-view mui-table-view-chevron">
@@ -180,6 +171,26 @@
 											</div>
 										</div>
 									</li>
+									<li>
+										<div class="xianshi">
+											<div class="qianggou">
+												<p><img src="../img/di02.jpg" /></p>
+												<div class="media">
+													2019年春季小四数学直播课点播
+													<div class="ping">
+														<div class="left">
+															<span>☆☆☆☆☆ 5.0</span>
+															<p><span>&yen;60.00</span><del>&yen;98.00</del></p>
+														</div>
+														<div class="right">
+															<span>200人学习</span>
+															<p>抢购</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
 								</ul>
 							</div>
 							<div id="item2" class="mui-slider-item mui-control-content">
@@ -193,8 +204,8 @@
 				</div>
 			</div>
 		</div>
-
-	
+<script src="../js/mui.min.js"></script>
+	<!--<script type="text/javascript" src="../js/shuxin.js" ></script>-->
 	</body>
 	
 
